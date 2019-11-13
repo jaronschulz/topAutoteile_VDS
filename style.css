@@ -1,0 +1,157 @@
+:root {
+  /* colors */
+  --main-red: rgba(195, 53, 53, 1);
+  --main-red-bg: rgba(195, 53, 53, 0.3);
+  --white: rgba(245, 245, 245, 1);
+  --black: rgba(117, 114, 114, 1);
+
+  /* elevation */
+  --elevation1: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  /* scale for 1.2 */
+  --font-size-1: 1rem;
+  --font-size-2: 1.2rem;
+  --font-size-3: 1.44rem;
+  --font-size-4: 1.728rem;
+  --font-size-5: 2.074rem;
+  --font-size-6: 2.488rem;
+}
+
+@media screen and (min-width: 800px) {
+  :root {
+    /* scale for 1.33 */
+    --font-size-1: 1rem;
+    --font-size-2: 1.333rem;
+    --font-size-3: 1.777rem;
+    --font-size-4: 2.369rem;
+    --font-size-5: 3.157rem;
+    --font-size-6: 4.209rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6 {
+  color: var(--black);
+}
+
+h1 {
+  font-size: var(--font-size-6);
+}
+h2 {
+  font-size: var(--font-size-5);
+}
+h3 {
+  font-size: var(--font-size-4);
+}
+h4 {
+  font-size: var(--font-size-3);
+}
+h5 {
+  font-size: var(--font-size-2);
+}
+h6 {
+  font-size: var(--font-size-1);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 4rem 9fr 3fr;
+  align-items: stretch;
+  justify-items: stretch;
+  height: 4rem;
+  background: var(--white);
+  box-shadow: var(--elevation1);
+}
+.logo-wrapper {
+  z-index: 10;
+  height: 4rem;
+  background: var(--main-red);
+  box-shadow: var(--elevation1);
+}
+.page-title,
+.alt-menu {
+  height: 4rem;
+  margin: 0.7rem 5px;
+}
+
+.user-area {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.alt-menu {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .user-area {
+    display: none;
+  }
+  .alt-menu {
+    display: flex;
+  }
+}
+
+.user-area::before {
+  content: "";
+  border: 1px solid var(--black);
+  height: 3rem;
+  margin-left: -1rem;
+}
+
+.user-button {
+  height: 3rem;
+  background: none;
+  border: none;
+}
+
+a img {
+  margin: 15px 5px;
+  width: 3.5rem;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 4rem 3fr 6fr 3fr;
+  height: 95vh;
+  background: var(--main-red-bg);
+}
+
+nav {
+  background: var(--main-red);
+  padding: 7rem 0;
+}
+.nav-button {
+  margin: 1rem 0;
+  background: none;
+  border: none;
+}
+.nav-button:hover,
+.nav-button:hover img {
+  color: var(--white);
+  transition: all 0.1s;
+  transform: scale(0.9);
+}
+.nav-button:hover img {
+  filter: invert(100%);
+}
+section,
+main,
+aside {
+  border-radius: 5px;
+  margin: 0.75rem 0.75rem;
+  background: var(--white);
+}
+
+main {
+  margin: 0.75rem 0;
+}
